@@ -17,7 +17,7 @@ article {
 
 .sidebar {
     margin-bottom: 15px;
-    max-height: 112px;
+    max-height: max-content;
     overflow: hidden;
     transition: var(--transition-2);
 }
@@ -33,12 +33,12 @@ article {
     }
 
     .sidebar {
-        max-height: 180px;
+        max-height: max-content;
         margin-bottom: 30px;
     }
 
     .sidebar.active {
-        max-height: 584px;
+        max-height: max-content;
     }
 }
 

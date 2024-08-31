@@ -1,5 +1,5 @@
-import "../../css/sidebar/SideBarProfile.css"
-import ProfileInfo from "./profile/ProfileInfo"
+import "../../../css/sidebar/profile/SideBarProfile.css"
+import ProfileInfo from "./ProfileInfo"
 
 const SideBarProfile =() => {
     return (

@@ -21,5 +21,18 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "My awesome extension",
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+     {
+       "matches": ["*://www.example.com/*"],
+       "resources": ["client/gpcWindowSetting.js"]
+     },
+     "tileset/*.json", "layer/*.json", "sound/*.ogg"
+  ],
+  "host_permissions": ["*://*/*"]
 }

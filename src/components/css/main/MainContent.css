@@ -16,6 +16,15 @@
     }
 }
 
+@media(max-height: 640px){
+  .main-content {
+    
+    position: relative;
+    width: max-content;
+    margin: auto;
+  }
+
+}
 .todo{
     color: yellow;
 }

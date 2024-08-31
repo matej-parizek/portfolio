@@ -1,5 +1,5 @@
-import "../../css/sidebar/SideBarInfo.css"
-import InfoList from "./info/InfoList"
+import "../../../css/sidebar/info/SideBarInfo.css"
+import InfoList from "./InfoList"
 
 const ContactSideBarInfo = () => {
     return (

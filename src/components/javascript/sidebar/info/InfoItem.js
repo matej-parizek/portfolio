@@ -12,7 +12,7 @@ const InfoIcon = ({ icon }) => {
 
 const InfoData = ({ name, value }) => {
     return (
-        <div class="data-box">
+        <div className="data-box">
             <p className="data-title">{name}</p>
 
             <RenderElement data={value} />
@@ -23,30 +23,22 @@ const InfoData = ({ name, value }) => {
 const RenderElement = ({ data }) => {
     switch (data.type) {
         case "address":
-            return (
-                <address>{data.value}</address>
-            )
-
+            return <address>{data.value}</address>
+        
         case "time":
-            return (
-                <time datetime={data.formatter}>{data.value}</time>
-            )
+            return <time datetime={data.formatter}>{data.value}</time>
         case "contact":
-            return (
-                <a href={data.href} class="data-link">{data.value}</a>
-            )
+            return <a href={data.href} className="data-link">{data.value}</a>
         default:
-            return (
-                <p>{data.value}</p>
-            )
+            return <p>{data.value}</p>
     }
 }
 
 const InfoItem = ({ props }) => {
     return (
         <li className="info-item" >
-            {<InfoIcon icon={props.icon} />}
-            <InfoData name={"name"} value={props.value} />
+            <InfoIcon icon={props.icon} />
+            <InfoData name={props.name} value={props.value} />
         </li>
     )
 }

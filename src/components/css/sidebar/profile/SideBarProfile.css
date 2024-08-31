@@ -12,7 +12,7 @@
     }
 }
 
-@media (min-width> 1250px) {
+@media (min-width: 1250px) {
     .sidebar-info {
         flex-direction: column;
     }

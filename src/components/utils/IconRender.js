@@ -7,10 +7,10 @@ import { IoLogoReact } from "react-icons/io5";
 
 const IconRender = ({ name }) => {
     switch(name){
-        case "email": return <IoMailOutline/>
-        case "phone": return <IoPhonePortraitOutline/>
-        case "birth": return <IoCalendarOutline/>
-        case "location": return <IoLocationOutline/>
+        case "email": return <><IoMailOutline/></>
+        case "phone": return <><IoPhonePortraitOutline/></>
+        case "birth": return <><IoCalendarOutline/></>
+        case "location": return <><IoLocationOutline/></>
         default: return <IoLogoReact/>
     }
 }

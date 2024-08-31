@@ -1,6 +1,6 @@
 import "../../css/sidebar/SideBar.css"
-import SideBarInfo from "./SideBarInfo";
-import SideBarProfile from "./SideBarProfile";
+import SideBarInfo from "./info/SideBarInfo";
+import SideBarProfile from "./profile/SideBarProfile";
 
 const SideBar = () => {
     return (

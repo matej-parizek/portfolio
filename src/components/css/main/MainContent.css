@@ -1,0 +1,21 @@
+@media (min-width: 1024px) {
+
+    .main-content {
+      position: relative;
+      width: max-content;
+      margin: auto;
+    }
+}
+
+@media (min-width: 1250px) {
+
+    .main-content {
+      min-width: 75%;
+      width: 75%;
+      margin: 0;
+    }
+}
+
+.todo{
+    color: yellow;
+}

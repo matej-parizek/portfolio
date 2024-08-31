@@ -1,4 +1,5 @@
-const data = [
+import bitmoji from "../images/avatar.png"
+export const contactData = [
   {
     id: 0,
     name: "Email",
@@ -19,7 +20,6 @@ const data = [
     },
     icon: "phone",
   },
-  
   {
     id: 2,
     name: "Birthday",
@@ -34,11 +34,16 @@ const data = [
     id: 3,
     name: "Address",
     value: {
-      value: "Prague, Czech republic",
+      value: "Prague, Czech Republic",
       type: "address"
     },
     icon: "location",
   }
-];
+]
 
-export default data
+export const profileData = 
+  {
+    img: bitmoji,
+    name: "Matej Parizek  ",
+    job:"Software Developer"
+  }

@@ -1,10 +1,13 @@
 import "../../css/sidebar/SideBar.css"
 import SideBarInfo from "./SideBarInfo";
+import SideBarProfile from "./SideBarProfile";
 
- const SideBar = () => {
+const SideBar = () => {
     return (
         <aside className="sidebar">
-            <SideBarInfo/>
+            <SideBarProfile />
+            <div className="separator" />
+            <SideBarInfo />
         </aside>
     );
 }

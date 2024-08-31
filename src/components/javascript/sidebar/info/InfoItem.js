@@ -1,4 +1,4 @@
-import "../../../css/sidebar/contact-info/InfoItem.css"
+import "../../../css/sidebar/info/InfoItem.css"
 import IconRender from "../../../utils/IconRender"
 
 

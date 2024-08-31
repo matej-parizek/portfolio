@@ -1,0 +1,17 @@
+.contact-sidebar-info {
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-2);
+}
+
+.contact-sidebar-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(min-width: 1250px) {
+    .contact-sidebar-info {
+        opacity: 1;
+        visibility: visible;
+    }
+}

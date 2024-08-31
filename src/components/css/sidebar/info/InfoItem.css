@@ -1,0 +1,92 @@
+.contact-item {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-box {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--orange-yellow-crayola);
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+}
+
+.icon-box::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--eerie-black-1);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.icon-box ion-icon {
+    --ionicon-stroke-width: 35px;
+}
+
+.data-box {
+
+    max-width: calc(100% - 46px);
+    width: calc(100% - 46px);
+}
+
+.data-box :is(.data-link, time, address) {
+    color: var(--white-2);
+    font-size: medium var(--fs-7);
+}
+
+.data-box address {
+    font-style: normal;
+}
+
+.data-title {
+    color: var(--light-gray-70);
+    font-size: medium var(--fs-8);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+/**
+ * responsive larger than 580px screen
+ */
+
+@media (min-width: 580px) {
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .data-box {
+        max-width: calc(100% - 64px);
+        width: calc(100% - 64px);
+    }
+}
+
+
+/**
+ * responsive larger than 1250px screen
+ */
+
+@media (min-width: 1250px) {
+    .data-box :is(.data-link) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .data-box :is(.data-link, time, address) {
+        --fs-7: 14px;
+        font-weight: var(--fw-300);
+    }
+}

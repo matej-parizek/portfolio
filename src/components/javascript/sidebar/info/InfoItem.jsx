@@ -1,5 +1,5 @@
 import "../../../css/sidebar/info/InfoItem.css"
-import IconRender from "../../../utils/IconRender"
+import IconRender from "../../../utils/IconRender.jsx"
 
 
 const InfoIcon = ({ icon }) => {

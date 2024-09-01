@@ -1,5 +1,5 @@
 import "../../../css/sidebar/info/InfoList.css"
-import InfoItem from "./InfoItem.js"
+import InfoItem from "./InfoItem.jsx"
 import {contactData} from "../../../../data/data.js"
 
 const InfoList = () => {

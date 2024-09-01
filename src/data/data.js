@@ -41,9 +41,27 @@ export const contactData = [
   }
 ]
 
-export const profileData = 
+export const profileData =
+{
+  img: bitmoji,
+  name: "Matej Parizek  ",
+  job: "Software Developer"
+}
+
+export const socialData = [
   {
-    img: bitmoji,
-    name: "Matej Parizek  ",
-    job:"Software Developer"
-  }
+    id: 1,
+    ref: "https://www.github.com/matej-parizek",
+    icon: "github",
+  },
+  {
+    id: 2,
+    ref: "https://www.linkedin.com/in/matěj-pařízek-b33298293",
+    icon: "linkedin",
+  },
+  {
+    id: 3,
+    ref: "https://www.instagram.com/matej.parizek/",
+    icon: "instagram",
+  },
+]

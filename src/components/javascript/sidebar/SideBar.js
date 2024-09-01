@@ -1,6 +1,7 @@
 import "../../css/sidebar/SideBar.css"
 import SideBarInfo from "./info/SideBarInfo";
 import SideBarProfile from "./profile/SideBarProfile";
+import Social from "./social/Social";
 
 const SideBar = () => {
     return (
@@ -8,6 +9,8 @@ const SideBar = () => {
             <SideBarProfile />
             <div className="separator" />
             <SideBarInfo />
+            <div className="separator"/>
+            <Social/>
         </aside>
     );
 }

@@ -1,5 +1,4 @@
 import '../../../css/main/navbar/NavBar.css'
-import { Nav } from '../../../../data/navigate'
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -23,15 +22,13 @@ const Buttons = ({ id, link, name, setLocation }) => {
     );
 }
 
-const NavBar = () => {
+const NavBar = ({Nav}) => {
     const [location, setLocation] = useState(0)
     useEffect(() => {
         const button = document.querySelector(`.navbar-link[id='${location}']`) 
-        console.log(`click ${location}`)  
         button.style.color = 'var(--orange-yellow-crayola)';
         return ( () => {
             button.style.color = 'blue';
-            console.log(`unclick click ${location}`)
             button.style.color = 'var(--light-gray)';
         })
     })

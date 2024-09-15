@@ -9,6 +9,7 @@ import { IoLogoGithub } from "react-icons/io5";
 import { IoLogoGitlab } from "react-icons/io5";
 import { IoLogoDiscord } from "react-icons/io5";
 import { IoBookOutline } from "react-icons/io5";
+import { IoEye } from "react-icons/io5";
 
 
 
@@ -24,6 +25,7 @@ const IconRender = ({ name, size , className}) => {
         case "gitlab": return <IoLogoGitlab className={className} size={size}/>
         case "discord": return <IoLogoDiscord className={className} size={size}/>
         case "book" : return <IoBookOutline className={className} size={size}/>
+        case "eye" : return <IoEye className={className} size={size}/>
         default: return <IoLogoReact className={className} size={size}/>
     }
 }

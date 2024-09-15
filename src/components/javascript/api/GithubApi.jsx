@@ -1,34 +1,38 @@
 import { useEffect, useState } from "react";
+import ResultReposponse from "./dto/Result.Response"
+require('dotenv').config();
 
 const auth = {
   headers: {
-    'Authorization': `token `
+    'Authorization': `token ${process.env.REACT_APP_TOKEN}`
   }
 }
 const FetchPortfolio = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true)
 
-
-  const fetchRepository = (urls) => {
-    const limit = Promise.all([
-      urls.map((it) => {
-        const url = it.url
-        fetch(url, auth)
-          .then(item => item.json())
-          .then(item => {
-            return item
-          })
-      })
-    ])
-
-    console.log(limit)
-  }
+  const username = process.env.REACT_APP_USERNAME
+  const fetchRepository = async (urls) => {
+    try {
+      const results = await Promise.all(
+        urls.map(async (it) => {
+          const url = it.url;
+          const response = await fetch(url, auth);
+          const item = await response.json();
+          return new ResultReposponse(item.url, item.name);
+        })
+      );
+      setLoading(false)
+      setData(results.filter((it)=> it.name!==`${username}`));
+    } catch (error) {
+      console.error('Error fetching repository data:', error);
+    }
+  };
 
   // Použití useEffect pro načtení dat při načtení komponenty
   useEffect(() => {
     setData(
-      fetch(`https://api.github.com/users/matej-parizek/repos`, auth
+      fetch(`https://api.github.com/users/${username}/repos`, auth
       )
         .then(it => it.json())
         .then(it => {
@@ -39,7 +43,7 @@ const FetchPortfolio = () => {
   console.log(data)
 
   return (
-    <div>
+    <div className="todo">
       <h1>Data from Multiple APIs</h1>
       {loading ? (
         <p>Loading...</p>
@@ -48,7 +52,7 @@ const FetchPortfolio = () => {
       ) : (
         <ul>
           {data.map((item, index) => (
-            <li key={index}>{JSON.stringify(item)}</li>
+            <li key={index}>{JSON.stringify(item.name)}</li>
           ))}
         </ul>
       )}
